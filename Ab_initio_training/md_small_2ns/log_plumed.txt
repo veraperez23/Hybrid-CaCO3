@@ -1,0 +1,78 @@
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.9.2 (git: Unknown) compiled on Jun 27 2026 at 00:05:01
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /scratch/vperez/conda-envs/deepmd-jax/lib/plumed
+PLUMED: For installed feature, see /scratch/vperez/conda-envs/deepmd-jax/lib/plumed/src/config/config.txt
+PLUMED: Molecular dynamics engine: ASE
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 596
+PLUMED: File suffix: 
+PLUMED: Timestep: 0.000500
+PLUMED: KbT: 2.743773
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED: Action DISTANCE
+PLUMED:   with label d
+PLUMED:   between atoms 1 2
+PLUMED:   using periodic boundary conditions
+PLUMED: Action OPES_METAD
+PLUMED:   with label opes
+PLUMED:   with arguments d
+PLUMED:   added component to this action:  opes.bias 
+PLUMED:   added component to this action:  opes.rct 
+PLUMED:   added component to this action:  opes.zed 
+PLUMED:   added component to this action:  opes.neff 
+PLUMED:   added component to this action:  opes.nker 
+PLUMED:   temperature = 330
+PLUMED:   beta = 0.364462
+PLUMED:   depositing new kernels with PACE = 500
+PLUMED:   expected BARRIER is 50
+PLUMED:   using target distribution with BIASFACTOR gamma = 18.2231
+PLUMED:   adaptive SIGMA will be used, with ADAPTIVE_SIGMA_STRIDE = 5000
+PLUMED:     thus the first x kernel depositions will be skipped, x = ADAPTIVE_SIGMA_STRIDE/PACE = 10
+PLUMED:   kernels are truncated with KERNELS_CUTOFF = 6.20985
+PLUMED:   the value at cutoff is = 4.22965e-09
+PLUMED:   regularization EPSILON = 4.22965e-09
+PLUMED:   kernels will be compressed when closer than COMPRESSION_THRESHOLD = 1
+PLUMED:   Bibliography: [1][2]
+PLUMED: Relevant bibliography:
+PLUMED:   [1] M. Invernizzi and M. Parrinello, J. Phys. Chem. Lett. 11, 2731-2736 (2020)
+PLUMED:   [2] M. Invernizzi and M. Parrinello, J. Chem. Theory Comput. 18, 3988-3996 (2022)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Action UPPER_WALLS
+PLUMED:   with label uwall
+PLUMED:   with arguments d
+PLUMED:   added component to this action:  uwall.bias 
+PLUMED:   at 0.900000
+PLUMED:   with an offset 0.000000
+PLUMED:   with force constant 1000.000000
+PLUMED:   and exponent 2.000000
+PLUMED:   rescaled 1.000000
+PLUMED:   added component to this action:  uwall.force2 
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 100
+PLUMED:   with arguments d opes.bias opes.rct opes.zed opes.neff opes.nker uwall.bias uwall.force2
+PLUMED:   on file COLVAR
+PLUMED:   with format  %f
+# DeepMD-jax: Starting on 1 device(s): [CudaDevice(id=0)]
+# Model loaded from '../model.pkl'.
+# Initializing the DPJaxCalculator
+Starting MD
+# Lattice vectors for neighbor images: Max 1 out of 1 candidates.
+MD done!
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   160.062541   160.062541   160.062541   160.062541
+PLUMED: 1 Prepare dependencies                       4000001     8.530821     0.000002     0.000001     0.000041
+PLUMED: 2 Sharing data                               4000001     5.875063     0.000001     0.000001     0.000036
+PLUMED: 3 Waiting for data                           4000001     2.705407     0.000001     0.000000     0.000035
+PLUMED: 4 Calculating (forward loop)                 4000001    77.985012     0.000019     0.000009     0.001200
+PLUMED: 5 Applying (backward loop)                   4000001    12.910718     0.000003     0.000002     0.001000
+PLUMED: 6 Update                                     4000001     3.902287     0.000001     0.000000     0.008641

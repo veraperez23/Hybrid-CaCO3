@@ -1,0 +1,22 @@
+/scratch/vperez/hybrid_training/training_model_smallbox/molecular_dynamics_4/grafs_cv_2
+hyperion-293
+Thu Aug  6 23:02:29 CEST 2026
+
+==============================================================================
+                        Miniforge3 Environment Loaded
+==============================================================================
+  Activated environment: miniforge3-base
+                                                                              
+  NOTE: This is a custom minimal environment.
+        We recommend creating your own conda environments for your
+        projects.
+                                                                              
+  More info: https://scc.dipc.org/docs/programming/languages/python/
+==============================================================================
+
+/scratch/vperez/hybrid_training/training_model_smallbox/molecular_dynamics_4/grafs_cv_2/plumed_md.py:26: DeprecationWarning: Use thermalize_momenta
+  MaxwellBoltzmannDistribution(atoms, temperature_K=T_init)
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/scratch/vperez/conda-envs/deepmd-jax/lib/libplumedKernel.so" +++
+WARNING: NPT: Setting the center-of-mass momentum to zero (was 4.15158 -2.84148 23.3179)
+[2026-08-07T10:01:24.577] error: *** JOB 6636777 ON hyperion-293 CANCELLED AT 2026-08-07T10:01:24 DUE to SIGNAL Terminated ***

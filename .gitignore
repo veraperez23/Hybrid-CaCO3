@@ -1,0 +1,8 @@
+dataset/
+
+*.xyz
+*force.txt
+*box.raw
+*coord.raw
+*energy.raw
+*force.raw

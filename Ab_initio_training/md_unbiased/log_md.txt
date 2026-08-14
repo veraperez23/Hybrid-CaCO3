@@ -1,0 +1,6 @@
+# DeepMD-jax: Starting on 1 device(s): [CudaDevice(id=0)]
+# Model loaded from './model.pkl'.
+# Initializing the DPJaxCalculator
+Starting MD
+# Lattice vectors for neighbor images: Max 1 out of 1 candidates.
+MD done!
