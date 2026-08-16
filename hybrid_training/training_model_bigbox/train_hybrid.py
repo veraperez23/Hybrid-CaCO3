@@ -22,7 +22,7 @@ train(
       print_every = 10, #puede que sea muy alto, a lo mejor hay que bajarlo 
       hybrid=True,
       obs_train_data_path=[
-          '/scratch/vperez/ForVera/ExampleTrainDeePMD_Jax_2/bias_pot_5/dataset',
+          '../../Ab_initio_training/md_large/dataset',
       ],
       obs_temperature = [330], # Temperature in Kelvin
       obs_target = [-18.*0.010364269666250866],
